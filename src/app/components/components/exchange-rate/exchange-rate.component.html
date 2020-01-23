@@ -1,0 +1,11 @@
+<div class="card">
+  <h2 class="font-heading uppercase">Current exchangerates</h2>
+  <div class="font-normal rates">
+    <p>{{ exchangeRates?.rates.EUR }} EUR</p>
+    <span class="arrows" aria-hidden="true">⇄</span>
+    <p>{{ exchangeRates?.rates.SEK }} SEK</p>
+  </div>
+  <p class="font-normal">
+    Updated at: {{ exchangeRates?.date | date: "dd MMM yyyy, h:mm" }}
+  </p>
+</div>
