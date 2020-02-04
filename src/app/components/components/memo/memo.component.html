@@ -1,25 +1,30 @@
 <div class="card card-memo">
-  <h2 class="font-heading uppercase">Remember to</h2>
-  <div *ngIf="!isInEditMode; else memoIsInEditMode">
-    <div class="memo-text-container">
-      <p class="font-normal">{{ memoText }}</p>
-    </div>
-    <div class="btn-container">
-      <button class="btn memo-btn" (click)="handleEditMode()">
-        {{ isMemoTextEmpty ? "Add" : "Edit" }}
-      </button>
-      <button class="btn memo-btn" (click)="handleMemoDeletion()">
-        Delete
-      </button>
-    </div>
+  <div class="card-theme">
+    <mat-icon class="icon icon-big">note</mat-icon>
   </div>
+  <div class="card-content">
+    <h2 class="font-heading uppercase">Remember to...</h2>
+    <div *ngIf="!isInEditMode; else memoIsInEditMode">
+      <div class="memo-text-container">
+        <p class="font-normal">{{ memoText }}</p>
+      </div>
+      <div class="btn-container">
+        <button class="btn memo-btn" (click)="handleEditMode()">
+          {{ isMemoTextEmpty ? "Add" : "Edit" }}
+        </button>
+        <button class="btn memo-btn" (click)="handleMemoDeletion()">
+          Delete
+        </button>
+      </div>
+    </div>
 
-  <ng-template #memoIsInEditMode>
-    <textarea class="font-normal" [(ngModel)]="memoText">{{
-      memoText
-    }}</textarea>
-    <button class="memo-btn save-btn" (click)="handleEditedMemo(memoText)">
-      Save
-    </button>
-  </ng-template>
+    <ng-template #memoIsInEditMode>
+      <textarea class="font-normal" [(ngModel)]="memoText">{{
+        memoText
+      }}</textarea>
+      <button class="memo-btn save-btn" (click)="handleEditedMemo(memoText)">
+        Save
+      </button>
+    </ng-template>
+  </div>
 </div>
