@@ -1,0 +1,66 @@
+main {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1120px) {
+    flex-direction: column;
+  }
+}
+
+.main-content {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 64rem;
+
+  @media screen and (max-width: 1120px) {
+    order: 0;
+    padding-bottom: 7rem;
+    width: auto;
+  }
+
+  .weather,
+  .exchange-rate {
+    width: 50%;
+  }
+
+  .memo {
+    width: 70%;
+  }
+
+  .date-time {
+    width: 30%;
+  }
+
+  .weather,
+  .exchange-rate,
+  .memo,
+  .date-time {
+    @media screen and (max-width: 1120px) {
+      width: 100%;
+    }
+  }
+}
+
+.sidebar {
+  order: 0;
+  height: 100vh;
+  width: 6rem;
+
+  @media screen and (max-width: 1120px) {
+    order: 1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4.5rem;
+    margin: 10px auto 0 auto;
+  }
+
+  .sidebar-inner {
+    height: 100%;
+  }
+}

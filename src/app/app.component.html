@@ -1,5 +1,11 @@
 <main>
-  <app-weather></app-weather>
-  <app-memo></app-memo>
-  <app-exchange-rate></app-exchange-rate>
+  <div class="sidebar">
+    <app-aside-nav class="sidebar-inner"></app-aside-nav>
+  </div>
+  <div class="main-content">
+    <app-weather class="weather"></app-weather>
+    <app-exchange-rate class="exchange-rate"></app-exchange-rate>
+    <app-date-time class="date-time"></app-date-time>
+    <app-memo class="memo"></app-memo>
+  </div>
 </main>
