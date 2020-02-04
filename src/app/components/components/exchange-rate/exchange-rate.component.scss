@@ -1,6 +1,10 @@
 .rates {
   display: flex;
-  justify-content: space-between;
+
+  @media screen and (max-width: 1120px) {
+    flex-direction: column;
+    text-align: center;
+  }
 
   p {
     font-size: 1.5rem;
@@ -9,5 +13,6 @@
   .arrows {
     align-self: center;
     font-size: 2rem;
+    margin: 0 1rem;
   }
 }
