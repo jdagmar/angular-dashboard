@@ -1,21 +1,31 @@
 <div class="card card-weather">
-  <div class="weather-card-heading">
-    <h2 class="font-heading uppercase">current weather in</h2>
+  <div class="card-theme">
+    <mat-icon class="icon-big icon-white">wb_sunny</mat-icon>
+  </div>
+  <div class="card-content">
     <select (change)="getWeather($event.target.value)" class="font-heading">
       <option *ngFor="let city of cities" [value]="city">
         {{ city | uppercase }}
       </option>
     </select>
-  </div>
+    <div
+      *ngIf="!isWeatherOffline; else weatherIsOffline"
+      class="weather-container"
+    >
+      <p class="font-normal">{{ (weather?.weather)[0].description }}</p>
 
-  <div *ngIf="!isWeatherOffline; else weatherIsOffline">
-    <p class="font-normal degrees">
-      {{ weather?.main.temp | round }} <span aria-hidden="true">&#176;</span>
-    </p>
-    <p class="font-normal">{{ (weather?.weather)[0].description }}</p>
-  </div>
+      <p class="font-normal degrees">
+        {{ weather?.main.temp | round }}
+        <span aria-hidden="true">&#176;</span>
+      </p>
+      <p class="font-normal details">
+        Feels like {{ weather?.main.feels_like | round }}
+        <span aria-hidden="true">&#176;</span>
+      </p>
+    </div>
 
-  <ng-template #weatherIsOffline>
-    <p class="error-msg font-normal">Weather is offline</p>
-  </ng-template>
+    <ng-template #weatherIsOffline>
+      <p class="error-msg font-normal">Weather is offline</p>
+    </ng-template>
+  </div>
 </div>

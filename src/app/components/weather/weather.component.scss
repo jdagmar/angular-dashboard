@@ -1,6 +1,12 @@
 .card-weather {
   .weather-card-heading {
     display: flex;
+    margin-bottom: 1rem;
+  }
+
+  select {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
 }
 
