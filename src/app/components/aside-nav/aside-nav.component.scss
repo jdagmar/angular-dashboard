@@ -1,0 +1,31 @@
+nav {
+  background-color: #403f3f;
+  color: #ffffff;
+  padding: 1rem;
+  height: inherit;
+  text-align: center;
+
+  ul {
+    li {
+      @media screen and (max-width: 1120px) {
+        width: 50%;
+      }
+
+      &:nth-child(2) {
+        margin: 2rem 0;
+
+        @media screen and (max-width: 1120px) {
+          margin: 0 2rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1120px) {
+      display: flex;
+    }
+  }
+}
+
+p {
+  margin: 0;
+}
