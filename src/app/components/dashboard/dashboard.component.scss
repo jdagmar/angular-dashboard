@@ -1,0 +1,34 @@
+.main-content {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 64rem;
+
+  @media screen and (max-width: 1120px) {
+    order: 0;
+    padding-bottom: 7rem;
+    width: auto;
+  }
+
+  .weather,
+  .exchange-rate {
+    width: 50%;
+  }
+
+  .memo {
+    width: 70%;
+  }
+
+  .date-time {
+    width: 30%;
+  }
+
+  .weather,
+  .exchange-rate,
+  .memo,
+  .date-time {
+    @media screen and (max-width: 1120px) {
+      width: 100%;
+    }
+  }
+}

@@ -3,44 +3,10 @@ main {
   flex-direction: row;
   margin: auto;
   flex-wrap: wrap;
+  height: 100%;
 
   @media screen and (max-width: 1120px) {
     flex-direction: column;
-  }
-}
-
-.main-content {
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  width: 64rem;
-
-  @media screen and (max-width: 1120px) {
-    order: 0;
-    padding-bottom: 7rem;
-    width: auto;
-  }
-
-  .weather,
-  .exchange-rate {
-    width: 50%;
-  }
-
-  .memo {
-    width: 70%;
-  }
-
-  .date-time {
-    width: 30%;
-  }
-
-  .weather,
-  .exchange-rate,
-  .memo,
-  .date-time {
-    @media screen and (max-width: 1120px) {
-      width: 100%;
-    }
   }
 }
 
@@ -48,6 +14,11 @@ main {
   order: 0;
   height: 100vh;
   width: 6rem;
+  background-color: #403f3f;
+  color: #ffffff;
+  padding: 1rem;
+  height: inherit;
+  text-align: center;
 
   @media screen and (max-width: 1120px) {
     order: 1;
@@ -59,18 +30,6 @@ main {
     height: 4.5rem;
     margin: 10px auto 0 auto;
   }
-
-  .sidebar-inner {
-    height: 100%;
-  }
-}
-
-nav {
-  background-color: #403f3f;
-  color: #ffffff;
-  padding: 1rem;
-  height: inherit;
-  text-align: center;
 
   ul {
     li {
