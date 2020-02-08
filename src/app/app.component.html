@@ -1,11 +1,19 @@
 <main>
-  <div class="sidebar">
-    <app-aside-nav class="sidebar-inner"></app-aside-nav>
-  </div>
-  <div class="main-content">
-    <app-weather class="weather"></app-weather>
-    <app-exchange-rate class="exchange-rate"></app-exchange-rate>
-    <app-date-time class="date-time"></app-date-time>
-    <app-memo class="memo"></app-memo>
-  </div>
+  <nav class="sidebar">
+    <ul>
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">
+          <mat-icon>dashboard</mat-icon>
+          <p class="icon-label">Dashboard</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/about">
+          <mat-icon>info</mat-icon>
+          <p class="icon-label">About</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
 </main>

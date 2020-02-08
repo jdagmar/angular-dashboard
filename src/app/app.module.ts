@@ -4,17 +4,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { WeatherComponent } from "./components/weather/weather.component";
 import { RoundPipe } from "./pipes/round.pipe";
-import { MemoComponent } from "./components/components/memo/memo.component";
-import { ExchangeRateComponent } from "./components/components/exchange-rate/exchange-rate.component";
+import { MemoComponent } from "./components/memo/memo.component";
+import { ExchangeRateComponent } from "./components/exchange-rate/exchange-rate.component";
 import { FormsModule } from "@angular/forms";
-import { registerLocaleData } from "@angular/common";
-import localeSe from "@angular/common/locales/se";
 import { DateTimeComponent } from "./components/date-time/date-time.component";
-import { AsideNavComponent } from "./components/aside-nav/aside-nav.component";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { AngularMaterialModule } from "./angular-material.module";
-
-registerLocaleData(localeSe, "se-SE");
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { AboutComponent } from "./components/about/about.component";
+import { AppRoutingModule } from "./app-routing/app-routing.module";
 
 @NgModule({
   declarations: [
@@ -24,14 +22,16 @@ registerLocaleData(localeSe, "se-SE");
     MemoComponent,
     ExchangeRateComponent,
     DateTimeComponent,
-    AsideNavComponent
+    DashboardComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     NoopAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
