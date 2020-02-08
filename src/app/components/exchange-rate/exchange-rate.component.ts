@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ExchangeRateService } from "./../../../services/exchange/exchange-rate.service";
+import { ExchangeRateService } from "./../../services/exchange/exchange-rate.service";
 
 @Component({
   selector: "app-exchange-rate",
