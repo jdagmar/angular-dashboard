@@ -1,0 +1,15 @@
+.text-wrapper {
+  margin: 1rem;
+
+  ul li {
+    margin: 1rem 0;
+    a {
+      color: #427a5b;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 4px solid #b4cd93;
+      }
+    }
+  }
+}
