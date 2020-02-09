@@ -25,7 +25,10 @@
     </div>
 
     <ng-template #weatherIsOffline>
-      <p class="error-msg font-normal">Weather is offline</p>
+      <div class="error-msg ">
+        <p class="font-normal">Couldn't fetch weahter</p>
+        <mat-icon>error_outline</mat-icon>
+      </div>
     </ng-template>
   </div>
 </div>
