@@ -12,7 +12,7 @@ export class WeatherService {
   getCurrentWeatherByCity(city) {
     return this.http
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=50182582175ed60ea90f269ea76e975d&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=50182582175ed60ea90f269ea76e975d&units=metric`
       )
       .pipe(retry(3), catchError(this.handleError));
   }
