@@ -4,7 +4,7 @@
   </div>
   <div class="card-content">
     <h2 class="font-heading uppercase">Exchangerates</h2>
-    <div *ngIf="isExchangeRatesOffine; else exchangeRatesIsOffline">
+    <div *ngIf="!isExchangeRatesOffine; else exchangeRatesIsOffline">
       <div class="font-normal rates">
         <p>{{ exchangeRates?.rates.EUR }} EUR</p>
         <span class="arrows" aria-hidden="true">⇄</span>
