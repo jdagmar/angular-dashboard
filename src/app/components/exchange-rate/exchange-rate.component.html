@@ -4,13 +4,21 @@
   </div>
   <div class="card-content">
     <h2 class="font-heading uppercase">Exchangerates</h2>
-    <div class="font-normal rates">
-      <p>{{ exchangeRates?.rates.EUR }} EUR</p>
-      <span class="arrows" aria-hidden="true">⇄</span>
-      <p>{{ exchangeRates?.rates.SEK }} SEK</p>
+    <div *ngIf="isExchangeRatesOffine; else exchangeRatesIsOffline">
+      <div class="font-normal rates">
+        <p>{{ exchangeRates?.rates.EUR }} EUR</p>
+        <span class="arrows" aria-hidden="true">⇄</span>
+        <p>{{ exchangeRates?.rates.SEK }} SEK</p>
+      </div>
+      <p class="font-normal details">
+        Updated at: {{ exchangeRates?.date | date: "dd MMM yyyy, h:mm" }}
+      </p>
     </div>
-    <p class="font-normal details">
-      Updated at: {{ exchangeRates?.date | date: "dd MMM yyyy, h:mm" }}
-    </p>
+    <ng-template #exchangeRatesIsOffline>
+      <div class="error-msg">
+        <p class="font-normal">Couldn't fetch exchangerates</p>
+        <mat-icon>error_outline</mat-icon>
+      </div>
+    </ng-template>
   </div>
 </div>

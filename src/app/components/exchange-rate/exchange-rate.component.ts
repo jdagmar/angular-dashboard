@@ -16,6 +16,7 @@ type ExchangeRates = {
 })
 export class ExchangeRateComponent implements OnInit {
   exchangeRates: ExchangeRates | undefined;
+  isExchangeRatesOffine = false;
 
   constructor(private exchangeRateService: ExchangeRateService) {
     this.getExchangeRates();
@@ -28,7 +29,7 @@ export class ExchangeRateComponent implements OnInit {
       (res: ExchangeRates) => {
         this.exchangeRates = res;
       },
-      error => console.log(error)
+      error => (this.isExchangeRatesOffine = true)
     );
   }
 }
