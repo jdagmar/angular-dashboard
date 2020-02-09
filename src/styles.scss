@@ -69,8 +69,14 @@ ul {
 }
 
 .error-msg {
-  font-size: 1.5rem;
+  display: flex;
+  font-size: 1rem;
   color: #e2434b;
+
+  .mat-icon {
+    align-self: center;
+    margin-left: 0.5rem;
+  }
 }
 
 select {
